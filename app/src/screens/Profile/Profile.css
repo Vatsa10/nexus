@@ -1,0 +1,48 @@
+.profile-container {
+  padding: 20px;
+}
+
+.profile-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.profile-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+}
+
+.profile-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.profile-settings {
+  margin-top: 20px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.setting-item label {
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}

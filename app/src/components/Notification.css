@@ -1,0 +1,32 @@
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.notification {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.notification.info {
+  background-color: #2196f3; /* Blue */
+}
+
+.notification.success {
+  background-color: #4caf50; /* Green */
+}
+
+.notification.warning {
+  background-color: #ff9800; /* Orange */
+}
+
+.notification.error {
+  background-color: #f44336; /* Red */
+}

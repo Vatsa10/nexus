@@ -1,0 +1,117 @@
+.task-detail-container {
+  padding: 20px;
+}
+
+.task-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-detail-header h2 {
+  font-size: 1.8rem;
+}
+
+.edit-task-btn {
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.task-detail-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-detail-item {
+  margin-bottom: 15px;
+}
+
+.task-detail-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.task-detail-item p {
+  display: inline;
+}
+
+.task-detail-item select {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.task-chat-section {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.task-chat-section h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+
+.chat-message:last-child {
+  margin-bottom: 0;
+}
+
+.chat-message strong {
+  color: #007bff;
+}
+
+.chat-message .timestamp {
+  font-size: 0.8em;
+  color: #777;
+  margin-left: 10px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.chat-input button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #218838;
+}
