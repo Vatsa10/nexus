@@ -205,7 +205,7 @@ app.get('/api/projects/:projectId', async (req, res) => {
 
 app.get('/api/projects/:projectId/tasks', async (req, res) => {
   const { projectId } = req.params;
-  const sql = `SELECT * FROM tasks WHERE projectId = $1`;
+  const sql = `SELECT id, title, description, assignee, TO_CHAR(dueDate::date, 'YYYY-MM-DD') AS dueDate, status, projectId FROM tasks WHERE projectId = $1`;
   try {
     const result = await pool.query(sql, [projectId]);
     res.json(result.rows);
@@ -216,7 +216,7 @@ app.get('/api/projects/:projectId/tasks', async (req, res) => {
 
 app.get('/api/tasks/:taskId', async (req, res) => {
   const { taskId } = req.params;
-  const sql = `SELECT * FROM tasks WHERE id = $1`;
+  const sql = `SELECT id, title, description, assignee, TO_CHAR(dueDate::date, 'YYYY-MM-DD') AS dueDate, status, projectId FROM tasks WHERE id = $1`;
   try {
     const result = await pool.query(sql, [taskId]);
     res.json(result.rows[0]);

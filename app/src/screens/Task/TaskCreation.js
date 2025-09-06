@@ -6,7 +6,7 @@ import './TaskCreation.css';
 const TaskCreation = ({ onClose, projectId, onTaskCreated }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [assignee, setAssignee] = useState(null);
+  const [assignee, setAssignee] = useState([]);
   const [dueDate, setDueDate] = useState('');
   const [status, setStatus] = useState('To Do');
   const [users, setUsers] = useState([]);
@@ -29,7 +29,7 @@ const TaskCreation = ({ onClose, projectId, onTaskCreated }) => {
       await axios.post('http://localhost:3001/api/tasks', {
         title,
         description,
-        assignee: assignee ? assignee.value : null,
+        assignee: assignee.map(a => a.value),
         dueDate,
         status,
         projectId,

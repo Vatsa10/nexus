@@ -32,7 +32,7 @@ const TaskDetail = () => {
       setAssignee(Array.isArray(response.data.assignee)
         ? response.data.assignee.map(email => ({ value: email, label: email }))
         : (response.data.assignee ? [{ value: response.data.assignee, label: response.data.assignee }] : []));
-      setDueDate(response.data.dueDate ? new Date(response.data.dueDate).toISOString().split('T')[0] : '');
+      setDueDate(response.data.dueDate || '');
       setStatus(response.data.status);
     } catch (error) {
       console.error(error);

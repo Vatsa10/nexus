@@ -10,7 +10,7 @@ const TaskList = ({ tasks }) => {
           <div key={task.id} className="task-card">
             <h3>{task.title}</h3>
             <p>Assignee: {Array.isArray(task.assignee) ? task.assignee.join(', ') : task.assignee || 'N/A'}</p>
-            <p>Due Date: {task.dueDate}</p>
+            <p>Due Date: {task.dueDate || 'N/A'}</p>
             <Link to={`/task/${task.id}`} className="view-task-btn">View Details</Link>
           </div>
         ))}
