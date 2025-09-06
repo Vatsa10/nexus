@@ -3,7 +3,7 @@ import axios from 'axios';
 import Select from 'react-select';
 import './TaskCreation.css';
 
-const TaskCreation = ({ onClose, projectId }) => {
+const TaskCreation = ({ onClose, projectId, onTaskCreated }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [assignee, setAssignee] = useState(null);
@@ -34,6 +34,7 @@ const TaskCreation = ({ onClose, projectId }) => {
         status,
         projectId,
       });
+      onTaskCreated(); // Call the callback to refresh the task list
       onClose();
     } catch (error) {
       console.error(error);

@@ -1,24 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import './TaskList.css';
 
-const TaskList = ({ projectId }) => {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    fetchTasks();
-  }, [projectId]);
-
-  const fetchTasks = async () => {
-    try {
-      const response = await axios.get(`http://localhost:3001/api/projects/${projectId}/tasks`);
-      setTasks(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
+const TaskList = ({ tasks }) => {
   return (
     <div className="task-list-container">
       <div className="task-list">
